@@ -11,6 +11,7 @@ end
 
 def add_song(song)
 @songs << song
+@@all << song
 song.artist = self
 end
 
