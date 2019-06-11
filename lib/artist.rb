@@ -30,7 +30,7 @@ end
 
 def self.find_or_create_by_name(name)
   #iterate over the artists
-binding.pry
+
   self.all.find{|artist| artist.name == name || artist = Artist.new(name).save}
 
 end
