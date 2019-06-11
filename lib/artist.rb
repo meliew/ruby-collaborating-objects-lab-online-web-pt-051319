@@ -31,7 +31,11 @@ end
 def self.find_or_create_by_name(name)
   #iterate over the artists
 
-artist = self.all.find{|artist| artist.name == name || Artist.new(name).save}
+artist = self.all.find do |artist| 
+  if artist.name == name
+    artist
+    else Artist.new(name).save
+  end
 
 end
 
