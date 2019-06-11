@@ -9,11 +9,11 @@ def initialize(name)
 end
 
 def self.new_by_filename(filename)
-
-  song = Song.new(filename.split(" - ")[1])
-  song.artist = Artist.find_or_create_by_name(filename.split(" - ")[0])
-  song.artist.add_song(song)
-  song
+song_name = filename.split(" - ")[1]
+artist = filename.split(" - ")[0]
+song = self.new(song_name)
+song.artist_name = artist
+song
 end
 
 
