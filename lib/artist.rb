@@ -33,7 +33,7 @@ def self.find_or_create_by_name(name)
 
 new_artist = self.all.find do |artist|
 
-    artist == name
+    artist.name == name
   end
      if new_artist 
        new_artist
