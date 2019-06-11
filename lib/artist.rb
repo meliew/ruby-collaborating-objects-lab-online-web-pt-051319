@@ -40,6 +40,7 @@ new_artist = self.all.find do |artist|
        else
          new_artist = Artist.new(name)
          new_artist.save
+         new_artist
 
   end
 
