@@ -38,7 +38,9 @@ new_artist = self.all.find do |artist|
      if new_artist
        new_artist
        else
-         Artist.new(name)
+         new_artist = Artist.new(name)
+         new_artist.save
+         
   end
 
 end
